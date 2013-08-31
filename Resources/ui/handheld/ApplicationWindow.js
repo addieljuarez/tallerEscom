@@ -23,12 +23,38 @@ function ApplicationWindow() {
 		width:200,
 		hintText:'aqui pon tu nombre',
 		borderColor:'#000',
+		keyboardType:Titanium.UI.KEYBOARD_EMAIL,
+		returnKeyType:Titanium.UI.RETURNKEY_NEXT,
+	});
+	
+	var password = Titanium.UI.createTextField({
+		top:200,
+		height:30,
+		width:200,
+		hintText:'aqui pon tu pass',
+		borderColor:'#000',
+		passwordMask:true,
+	});
+	
+	var enviar = Titanium.UI.createButton({
+		top:300,
+		height:40,
+		width:150,
+		title:'envia',
+		// backgroundImage:'none',
 	});
 	
 	
+	self.addEventListener('click',function(e){
+		// alert('click en la ventana');
+		nombre.blur();
+		password.blur();
+	});
 	
 	self.add(saludo);
 	self.add(nombre);
+	self.add(password);
+	self.add(enviar);
 	return self;
 
 }
