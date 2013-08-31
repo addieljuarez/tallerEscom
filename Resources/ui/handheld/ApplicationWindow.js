@@ -1,20 +1,34 @@
 //Application Window Component Constructor
 function ApplicationWindow() {
 	var self = Titanium.UI.createWindow({
-		backgroundColor:'red',
+		backgroundColor:'#fff',
+		top:0,
+		bottom:0,
+		left:0,
+		right:0,
+		height:480,
+		width:320,
 	})
 	
 	
-	var texto  = Titanium.UI.createLabel({
+	var saludo  = Titanium.UI.createLabel({
 		text:'saludos',
+		top:20,
+		color:'#000',
 	});
 	
-	texto.addEventListener('click', function(e){
-		alert('saludos');
+	var nombre = Titanium.UI.createTextField({
+		top:100,
+		height:30,
+		width:200,
+		hintText:'aqui pon tu nombre',
+		borderColor:'#000',
 	});
 	
 	
-	self.add(texto)
+	
+	self.add(saludo);
+	self.add(nombre);
 	return self;
 
 }
