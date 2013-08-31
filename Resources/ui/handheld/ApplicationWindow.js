@@ -1,5 +1,9 @@
 //Application Window Component Constructor
 function ApplicationWindow() {
+	
+	var Main = require('ui/common/main');
+	
+	
 	var self = Titanium.UI.createWindow({
 		backgroundColor:'#fff',
 		top:0,
@@ -75,7 +79,14 @@ function ApplicationWindow() {
 	
 	
 	enviar.addEventListener('click', function(e){
-		
+		if (nombre.value != '' && password.value !='') {
+			// alert('bien');
+			var main = new Main();
+			main.open();
+			self.close();
+		}else{
+			alert('llena todos los campos');
+		}
 	});
 	
 	
