@@ -1,7 +1,13 @@
-function IMAGEVIEW(){
+function IMAGEVIEW(parametro, parametro2){
 	var self = Titanium.UI.createWindow({
 		backgroundColor:'purple',
 	});
+	
+	var parametroRec = parametro;
+	var parametroRec2 = parametro2;
+	
+	alert(parametroRec);
+	alert(parametroRec2);
 	
 	var contenedorImagenes = (function(){
 		var self = Titanium.UI.createView({

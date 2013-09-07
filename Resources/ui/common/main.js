@@ -10,8 +10,12 @@ function MainWindow(){
 	
 	var Web  = require('ui/common/web');
 	var ImageView = require('ui/common/imageView');
-	var JSON = require('ui/common/json');
+	var JSON2 = require('ui/common/json');
 	
+	
+	var parametro = 50;
+	
+	var parametro2 = 100;
 	
 	
 	
@@ -54,13 +58,13 @@ function MainWindow(){
 	});
 	
 	boton2.addEventListener('click', function(e){
-		var imageView = new ImageView();
+		var imageView = new ImageView(parametro, parametro2);
 		imageView.open();
 	});
 	
 	
 	boton3.addEventListener('click', function(e){
-		var json = new JSON();
+		var json = new JSON2();
 		json.open();
 	});
 	
